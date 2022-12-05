@@ -134,6 +134,7 @@ func (h *MessageHandler) OnClose(session getty.Session) {
 
 func (h *MessageHandler) OnMessage(session getty.Session, pkg interface{}) {
 	log.Printf("OnMessage....")
+	time.Sleep(time.Second * 10)
 	//s, ok := pkg.(string)
 	//if !ok {
 	//	log.Printf("illegal package{%#v}", pkg)
