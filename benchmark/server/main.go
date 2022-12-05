@@ -133,7 +133,7 @@ func (h *MessageHandler) OnClose(session getty.Session) {
 }
 
 func (h *MessageHandler) OnMessage(session getty.Session, pkg interface{}) {
-	log.Printf("OnMessage....")
+	log.Printf("OnMessage....:%v", pkg)
 	time.Sleep(time.Second * 10)
 	//s, ok := pkg.(string)
 	//if !ok {
