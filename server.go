@@ -295,6 +295,7 @@ func (s *server) runTCPEventLoop(newSession NewSessionCallback) {
 				<-gxtime.After(delay)
 			}
 			client, err = s.accept(newSession)
+			log.Info("accept")
 			if err != nil {
 				if netErr, ok := perrors.Cause(err).(net.Error); ok && netErr.Temporary() {
 					if delay == 0 {

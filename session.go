@@ -574,7 +574,7 @@ func (s *session) addTask(pkg interface{}) {
 
 func (s *session) handlePackage() {
 	var err error
-
+	log.Info("async handel package")
 	defer func() {
 		if r := recover(); r != nil {
 			const size = 64 << 10
